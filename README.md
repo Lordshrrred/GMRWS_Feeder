@@ -20,7 +20,22 @@ The site includes:
 
 - `index.html`
 - three seed field-note posts
+- generated `syndicated/` summaries from the main GMRWS blog
 - `rss.xml`
 - `sitemap.xml`
 - `robots.txt`
 - `.nojekyll`
+
+## Syndication
+
+The `Sync Main Blog` GitHub Action checks out `Lordshrrred/GlobalMercuryRecovery`, reads `content/blog`, and generates feeder summary pages in `syndicated/`.
+
+The summary pages link back to the canonical articles on:
+
+`https://globalmercuryrecovery.com/blog`
+
+Manual local sync:
+
+```bash
+node scripts/sync-main-blog.mjs ../GlobalMercuryRecovery/content/blog
+```

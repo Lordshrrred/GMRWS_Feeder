@@ -1,0 +1,46 @@
+name: Sync Main Blog
+
+on:
+  schedule:
+    - cron: '30 10 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-main-blog-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feeder repo
+        uses: actions/checkout@v4
+
+      - name: Checkout main GMRWS repo
+        uses: actions/checkout@v4
+        with:
+          repository: Lordshrrred/GlobalMercuryRecovery
+          path: main-site
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync main blog into feeder site
+        run: node scripts/sync-main-blog.mjs main-site/content/blog
+
+      - name: Commit synced feeder pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html rss.xml sitemap.xml syndicated
+          if git diff --staged --quiet; then
+            echo "No feeder changes to commit."
+            exit 0
+          fi
+          git commit -m "Auto: sync GMRWS blog summaries"
+          git push
