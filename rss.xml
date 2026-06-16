@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Mercury Recovery Field Notes</title>
+    <link>https://lordshrrred.github.io/GMRWS_Feeder/</link>
+    <description>Independent field notes on mercury remediation, water security, ASGM cleanup, and tailings recovery.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 16 Jun 2026 21:30:00 GMT</lastBuildDate>
+    <item>
+      <title>Seven Questions To Ask Before Funding Mercury Remediation</title>
+      <link>https://lordshrrred.github.io/GMRWS_Feeder/posts/mercury-remediation-questions.html</link>
+      <guid>https://lordshrrred.github.io/GMRWS_Feeder/posts/mercury-remediation-questions.html</guid>
+      <pubDate>Tue, 16 Jun 2026 21:30:00 GMT</pubDate>
+      <description>A practical checklist for mercury remediation funders evaluating capture, verification, community safety, and long-term land outcomes.</description>
+    </item>
+    <item>
+      <title>Why Artisanal Mining Cleanup Has To Include Water Security</title>
+      <link>https://lordshrrred.github.io/GMRWS_Feeder/posts/asgm-water-security.html</link>
+      <guid>https://lordshrrred.github.io/GMRWS_Feeder/posts/asgm-water-security.html</guid>
+      <pubDate>Tue, 16 Jun 2026 21:20:00 GMT</pubDate>
+      <description>Mercury cleanup in artisanal mining regions is stronger when paired with aquifer protection and reliable community water infrastructure.</description>
+    </item>
+    <item>
+      <title>From Tailings Liability To Regeneration Asset</title>
+      <link>https://lordshrrred.github.io/GMRWS_Feeder/posts/tailings-to-regeneration.html</link>
+      <guid>https://lordshrrred.github.io/GMRWS_Feeder/posts/tailings-to-regeneration.html</guid>
+      <pubDate>Tue, 16 Jun 2026 21:10:00 GMT</pubDate>
+      <description>A field-note framework for converting mine tailings cleanup into land restoration, water protection, and future-use planning.</description>
+    </item>
+  </channel>
+</rss>
